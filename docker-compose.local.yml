@@ -7,9 +7,6 @@ services:
     network_mode: host
     volumes:
       - ./:/tests
-    ports:
-      - "1337:1337"
-      - "1338:1338"
     entrypoint:
       [
         "/opt/testcafe/docker/testcafe-docker.sh",
