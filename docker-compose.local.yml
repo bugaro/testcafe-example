@@ -4,6 +4,7 @@ services:
     image: testcafe/testcafe:1.20.0
     container_name: autotest
     working_dir: /tests
+    network_mode: host
     volumes:
       - ./:/tests
     ports:
