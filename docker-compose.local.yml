@@ -1,0 +1,18 @@
+version: "3"
+services:
+  e2e:
+    image: testcafe/testcafe:1.20.0
+    container_name: autotest
+    working_dir: /tests
+    volumes:
+      - ./:/tests
+    ports:
+      - "1337:1337"
+      - "1338:1338"
+    entrypoint:
+      [
+        "/opt/testcafe/docker/testcafe-docker.sh",
+        "remote",
+        "-L",
+        "tests/**/*.fixture.ts",
+      ]
