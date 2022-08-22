@@ -14,5 +14,7 @@ services:
         "/opt/testcafe/docker/testcafe-docker.sh",
         "remote",
         "-L",
+        "hostname",
+        "localhost",
         "tests/**/*.fixture.ts",
       ]
