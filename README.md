@@ -4,6 +4,12 @@
 
 Testcafe docker-compose example for local run.
 
+## Clone project
+
+```sh
+git clone https://github.com/bugaro/testcafe-example.git
+```
+
 ## Install dependencies
 
 ```sh
