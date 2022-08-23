@@ -4,7 +4,9 @@ services:
     image: testcafe/testcafe:1.20.0
     container_name: autotest
     working_dir: /tests
-    network_mode: host
+    ports:
+      - "1337:1337"
+      - "1338:1338"
     volumes:
       - ./:/tests
     entrypoint:
@@ -12,7 +14,7 @@ services:
         "/opt/testcafe/docker/testcafe-docker.sh",
         "remote",
         "-L",
-        "hostname",
+        "--hostname",
         "localhost",
         "tests/**/*.fixture.ts",
       ]
